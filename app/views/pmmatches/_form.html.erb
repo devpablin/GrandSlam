@@ -1,0 +1,47 @@
+<%= form_with(model: pmmatch, local: true) do |form| %>
+  <% if pmmatch.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pmmatch.errors.count, "error") %> prohibited this pmmatch from being saved:</h2>
+
+      <ul>
+      <% pmmatch.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date, id: :pmmatch_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :score1 %>
+    <%= form.text_field :score1, id: :pmmatch_score1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :score2 %>
+    <%= form.text_field :score2, id: :pmmatch_score2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pmcourt_id_id %>
+    <%= form.text_field :pmcourt_id_id, id: :pmmatch_pmcourt_id_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pmround_id_id %>
+    <%= form.text_field :pmround_id_id, id: :pmmatch_pmround_id_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pmtournament_id_id %>
+    <%= form.text_field :pmtournament_id_id, id: :pmmatch_pmtournament_id_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

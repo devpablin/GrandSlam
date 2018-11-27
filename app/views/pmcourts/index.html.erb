@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pmcourts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pmcourts.each do |pmcourt| %>
+      <tr>
+        <td><%= pmcourt.number %></td>
+        <td><%= link_to 'Show', pmcourt %></td>
+        <td><%= link_to 'Edit', edit_pmcourt_path(pmcourt) %></td>
+        <td><%= link_to 'Destroy', pmcourt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pmcourt', new_pmcourt_path %>

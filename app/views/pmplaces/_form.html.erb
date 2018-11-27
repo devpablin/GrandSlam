@@ -1,0 +1,27 @@
+<%= form_with(model: pmplace, local: true) do |form| %>
+  <% if pmplace.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pmplace.errors.count, "error") %> prohibited this pmplace from being saved:</h2>
+
+      <ul>
+      <% pmplace.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :pmplace_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pmcountry_id_id %>
+    <%= form.text_field :pmcountry_id_id, id: :pmplace_pmcountry_id_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

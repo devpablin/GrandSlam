@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pmplace.name %>
+</p>
+
+<p>
+  <strong>Pmcountry:</strong>
+  <%= @pmplace.pmcountry_id %>
+</p>
+
+<%= link_to 'Edit', edit_pmplace_path(@pmplace) %> |
+<%= link_to 'Back', pmplaces_path %>

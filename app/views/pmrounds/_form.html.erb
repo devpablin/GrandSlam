@@ -1,0 +1,22 @@
+<%= form_with(model: pmround, local: true) do |form| %>
+  <% if pmround.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pmround.errors.count, "error") %> prohibited this pmround from being saved:</h2>
+
+      <ul>
+      <% pmround.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :round %>
+    <%= form.text_field :round, id: :pmround_round %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

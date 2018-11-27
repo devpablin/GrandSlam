@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pmmatches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Score1</th>
+      <th>Score2</th>
+      <th>Pmcourt</th>
+      <th>Pmround</th>
+      <th>Pmtournament</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pmmatches.each do |pmmatch| %>
+      <tr>
+        <td><%= pmmatch.date %></td>
+        <td><%= pmmatch.score1 %></td>
+        <td><%= pmmatch.score2 %></td>
+        <td><%= pmmatch.pmcourt_id %></td>
+        <td><%= pmmatch.pmround_id %></td>
+        <td><%= pmmatch.pmtournament_id %></td>
+        <td><%= link_to 'Show', pmmatch %></td>
+        <td><%= link_to 'Edit', edit_pmmatch_path(pmmatch) %></td>
+        <td><%= link_to 'Destroy', pmmatch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pmmatch', new_pmmatch_path %>

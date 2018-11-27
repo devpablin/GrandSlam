@@ -1,0 +1,2 @@
+class Pmnationality < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class Pmcountry < ApplicationRecord
+end

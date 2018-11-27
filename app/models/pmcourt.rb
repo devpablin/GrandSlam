@@ -1,0 +1,2 @@
+class Pmcourt < ApplicationRecord
+end

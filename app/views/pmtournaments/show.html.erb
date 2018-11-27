@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pmtournament.name %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @pmtournament.year %>
+</p>
+
+<p>
+  <strong>Init date:</strong>
+  <%= @pmtournament.init_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @pmtournament.end_date %>
+</p>
+
+<p>
+  <strong>Pmplace:</strong>
+  <%= @pmtournament.pmplace_id %>
+</p>
+
+<%= link_to 'Edit', edit_pmtournament_path(@pmtournament) %> |
+<%= link_to 'Back', pmtournaments_path %>
