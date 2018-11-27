@@ -2,8 +2,8 @@
 
 <h1>Pmtrainers</h1>
 
-<table>
-  <thead>
+<table class="table table-bordered">
+  <thead class="thead-dark">
     <tr>
       <th>Nombre</th>
       <th>Apellido</th>
@@ -16,9 +16,11 @@
       <tr>
         <td><%= pmtrainer.nombre %></td>
         <td><%= pmtrainer.apellido %></td>
-        <td><%= link_to 'Show', pmtrainer %></td>
-        <td><%= link_to 'Edit', edit_pmtrainer_path(pmtrainer) %></td>
-        <td><%= link_to 'Destroy', pmtrainer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <td><%= link_to 'Show', pmtrainer, class: "btn btn-info"%></td>
+        <td><%= link_to 'Edit', edit_pmtrainer_path(pmtrainer), class: "btn btn-success" %></td>
+        <td><%= link_to 'Destroy', pmtrainer, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"%></td>
+
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Pmtrainer', new_pmtrainer_path %>
+<%= link_to 'New Pmtrainer', new_pmtrainer_path, class: "btn btn-warning"%>

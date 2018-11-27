@@ -1,0 +1,2 @@
+class Pmreferee < ApplicationRecord
+end

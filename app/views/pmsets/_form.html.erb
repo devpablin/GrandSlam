@@ -1,0 +1,27 @@
+<%= form_with(model: pmset, local: true) do |form| %>
+  <% if pmset.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pmset.errors.count, "error") %> prohibited this pmset from being saved:</h2>
+
+      <ul>
+      <% pmset.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :local_points %>
+    <%= form.number_field :local_points, id: :pmset_local_points %>
+  </div>
+
+  <div class="field">
+    <%= form.label :visitor_points %>
+    <%= form.text_field :visitor_points, id: :pmset_visitor_points %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

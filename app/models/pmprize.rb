@@ -1,0 +1,2 @@
+class Pmprize < ApplicationRecord
+end

@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h2>
   <strong>Name:</strong>
   <%= @pmcountry.name %>
-</p>
+</h2>
 
-<%= link_to 'Edit', edit_pmcountry_path(@pmcountry) %> |
-<%= link_to 'Back', pmcountries_path %>
+<%= link_to 'Edit', edit_pmcountry_path(@pmcountry), class: "btn btn-warning" %> |
+<%= link_to 'Back', pmcountries_path, class: "btn btn-info"%>

@@ -1,0 +1,2 @@
+class Pmset < ApplicationRecord
+end

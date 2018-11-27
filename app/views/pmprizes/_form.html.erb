@@ -1,0 +1,27 @@
+<%= form_with(model: pmprize, local: true) do |form| %>
+  <% if pmprize.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pmprize.errors.count, "error") %> prohibited this pmprize from being saved:</h2>
+
+      <ul>
+      <% pmprize.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.text_field :amount, id: :pmprize_amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :pmprize_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

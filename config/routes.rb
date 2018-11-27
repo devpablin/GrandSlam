@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :pmsets
+  resources :pmprizes
+  resources :pmreferees
   resources :pmplaces
   resources :pmcountries
   resources :pmnationalities
