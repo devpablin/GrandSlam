@@ -69,6 +69,6 @@ class PmcourtsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pmcourt_params
-      params.require(:pmcourt).permit(:number)
+      params.require(:pmcourt).permit(:number, :pmplace_id)
     end
 end

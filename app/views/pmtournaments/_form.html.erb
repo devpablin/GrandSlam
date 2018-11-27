@@ -32,8 +32,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :pmplace_id_id %>
-    <%= form.text_field :pmplace_id_id, id: :pmtournament_pmplace_id_id %>
+    <%= form.label "Place" %>
+    <%= form.select( :pmplace_id, Pmplace.all.collect {|p| [ p.name , p.id ] } )%>
   </div>
 
   <div class="actions">

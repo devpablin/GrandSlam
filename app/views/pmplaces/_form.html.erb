@@ -17,8 +17,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :pmcountry_id_id %>
-    <%= form.text_field :pmcountry_id_id, id: :pmplace_pmcountry_id_id %>
+    <%= form.label :pmcountry_id %>
+    <%= form.select( :pmcountry_id, Pmcountry.all.collect {|p| [ p.name, p.id ] } )%>
   </div>
 
   <div class="actions">

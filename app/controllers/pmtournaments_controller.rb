@@ -69,6 +69,6 @@ class PmtournamentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pmtournament_params
-      params.require(:pmtournament).permit(:name, :year, :init_date, :end_date, :pmplace_id_id)
+      params.require(:pmtournament).permit(:name, :year, :init_date, :end_date, :pmplace_id)
     end
 end

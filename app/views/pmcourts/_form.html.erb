@@ -15,6 +15,10 @@
     <%= form.label :number %>
     <%= form.text_field :number, id: :pmcourt_number %>
   </div>
+  <div class="field">
+    <%= form.label "place" %>
+    <%= form.select( :pmplace_id, Pmplace.all.collect {|p| [ p.name, p.id ] } )%>
+  </div>
 
   <div class="actions">
     <%= form.submit %>

@@ -69,6 +69,6 @@ class PmplacesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pmplace_params
-      params.require(:pmplace).permit(:name, :pmcountry_id_id)
+      params.require(:pmplace).permit(:name, :pmcountry_id)
     end
 end

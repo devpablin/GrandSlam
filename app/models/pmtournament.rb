@@ -1,3 +1,3 @@
 class Pmtournament < ApplicationRecord
-  belongs_to :pmplace_id
+  belongs_to :pmplace
 end

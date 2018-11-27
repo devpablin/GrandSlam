@@ -16,18 +16,28 @@
 </p>
 
 <p>
+  <strong>Local:</strong>
+  <%= @pmmatch.pmplayer_1.first_name + ' ' + @pmmatch.pmplayer_1.last_name %>
+</p>
+
+<p>
+  <strong>Visitor:</strong>
+  <%= @pmmatch.pmplayer_2.first_name + ' ' + @pmmatch.pmplayer_2.last_name %>
+</p>
+
+<p>
   <strong>Pmcourt:</strong>
-  <%= @pmmatch.pmcourt_id %>
+  <%= @pmmatch.pmcourt.number %>
 </p>
 
 <p>
   <strong>Pmround:</strong>
-  <%= @pmmatch.pmround_id %>
+  <%= @pmmatch.pmround.round %>
 </p>
 
 <p>
   <strong>Pmtournament:</strong>
-  <%= @pmmatch.pmtournament_id %>
+  <%= @pmmatch.pmtournament.name %>
 </p>
 
 <%= link_to 'Edit', edit_pmmatch_path(@pmmatch) %> |

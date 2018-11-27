@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pmtournaments</h1>
+<h1>Tournaments</h1>
 
 <table>
   <thead>
@@ -9,7 +9,7 @@
       <th>Year</th>
       <th>Init date</th>
       <th>End date</th>
-      <th>Pmplace</th>
+      <th>Place</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,7 +21,7 @@
         <td><%= pmtournament.year %></td>
         <td><%= pmtournament.init_date %></td>
         <td><%= pmtournament.end_date %></td>
-        <td><%= pmtournament.pmplace_id %></td>
+        <td><%= pmtournament.pmplace.name%></td>
         <td><%= link_to 'Show', pmtournament %></td>
         <td><%= link_to 'Edit', edit_pmtournament_path(pmtournament) %></td>
         <td><%= link_to 'Destroy', pmtournament, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -27,18 +27,28 @@
   </div>
 
   <div class="field">
-    <%= form.label :pmcourt_id_id %>
-    <%= form.text_field :pmcourt_id_id, id: :pmmatch_pmcourt_id_id %>
+    <%= form.label :pmcourt_id %>
+    <%= form.select( :pmcourt_id, Pmcourt.all.collect {|p| [ p.number, p.id ] } )%>
   </div>
 
   <div class="field">
-    <%= form.label :pmround_id_id %>
-    <%= form.text_field :pmround_id_id, id: :pmmatch_pmround_id_id %>
+    <%= form.label :pmround_id %>
+    <%= form.select( :pmround_id, Pmround.all.collect {|p| [ p.round, p.id ] } )%>
   </div>
 
   <div class="field">
-    <%= form.label :pmtournament_id_id %>
-    <%= form.text_field :pmtournament_id_id, id: :pmmatch_pmtournament_id_id %>
+    <%= form.label :pmtournament_id %>
+    <%= form.select( :pmtournament_id, Pmtournament.all.collect {|p| [ p.name, p.id ] } )%>
+  </div>
+
+  <div class="field">
+    <%= form.label "Local" %>
+    <%= form.select( :pmplayer_1_id, Pmplayer.all.collect {|p| [ p.first_name + ' '+p.last_name, p.id ] } )%>
+  </div>
+
+  <div class="field">
+    <%= form.label "Visitor" %>
+    <%= form.select( :pmplayer_2_id, Pmplayer.all.collect {|p| [ p.first_name + ' '+p.last_name, p.id ] } )%>
   </div>
 
   <div class="actions">
