@@ -1,0 +1,2 @@
+class Pmplayer < ApplicationRecord
+end

@@ -1,0 +1,32 @@
+<%= form_with(model: pmplayer, local: true) do |form| %>
+  <% if pmplayer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pmplayer.errors.count, "error") %> prohibited this pmplayer from being saved:</h2>
+
+      <ul>
+      <% pmplayer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, id: :pmplayer_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, id: :pmplayer_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fechanacimiento %>
+    <%= form.date_select :fechanacimiento, id: :pmplayer_fechanacimiento %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

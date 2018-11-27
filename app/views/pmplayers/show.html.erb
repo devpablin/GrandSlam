@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @pmplayer.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @pmplayer.last_name %>
+</p>
+
+<p>
+  <strong>Fechanacimiento:</strong>
+  <%= @pmplayer.fechanacimiento %>
+</p>
+
+<%= link_to 'Edit', edit_pmplayer_path(@pmplayer) %> |
+<%= link_to 'Back', pmplayers_path %>
