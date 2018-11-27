@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pmtournaments</h1>
+<h1>Tournaments</h1>
 
 <table>
   <thead>
@@ -22,9 +22,9 @@
         <td><%= pmtournament.init_date %></td>
         <td><%= pmtournament.end_date %></td>
         <td><%= pmtournament.pmplace_id %></td>
-        <td><%= link_to 'Show', pmtournament %></td>
-        <td><%= link_to 'Edit', edit_pmtournament_path(pmtournament) %></td>
-        <td><%= link_to 'Destroy', pmtournament, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', pmtournament , class: "btn btn-info"%></td>
+        <td><%= link_to 'Edit', edit_pmtournament_path(pmtournament) , class: "btn btn-warning"%></td>
+        <td><%= link_to 'Destroy', pmtournament, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Pmtournament', new_pmtournament_path %>
+<%= link_to 'New Pmtournament', new_pmtournament_path , class: "btn btn-success"%>

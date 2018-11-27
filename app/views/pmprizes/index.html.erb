@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pmprizes</h1>
+<h1>Prizes</h1>
 
-<table >
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Amount</th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= pmprize.amount %></td>
         <td><%= pmprize.name %></td>
-        <td><%= link_to 'Show', pmprize %></td>
-        <td><%= link_to 'Edit', edit_pmprize_path(pmprize) %></td>
-        <td><%= link_to 'Destroy', pmprize, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', pmprize , class: "btn btn-info"%></td>
+        <td><%= link_to 'Edit', edit_pmprize_path(pmprize) , class: "btn btn-warning"%></td>
+        <td><%= link_to 'Destroy', pmprize, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Pmprize', new_pmprize_path %>
+<%= link_to 'New Pmprize', new_pmprize_path , class: "btn btn-success"%>

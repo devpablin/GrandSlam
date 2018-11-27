@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h2>
   <strong>Round:</strong>
   <%= @pmround.round %>
-</p>
+</h2>
 
-<%= link_to 'Edit', edit_pmround_path(@pmround) %> |
-<%= link_to 'Back', pmrounds_path %>
+<%= link_to 'Edit', edit_pmround_path(@pmround) , class: "btn btn-warning"%> |
+<%= link_to 'Back', pmrounds_path , class: "btn btn-info"%>

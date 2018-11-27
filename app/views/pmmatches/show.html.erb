@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h2>
   <strong>Date:</strong>
   <%= @pmmatch.date %>
-</p>
+</h2>
 
 <p>
   <strong>Score1:</strong>
@@ -30,5 +30,5 @@
   <%= @pmmatch.pmtournament_id %>
 </p>
 
-<%= link_to 'Edit', edit_pmmatch_path(@pmmatch) %> |
-<%= link_to 'Back', pmmatches_path %>
+<%= link_to 'Edit', edit_pmmatch_path(@pmmatch) , class: "btn btn-warning"%> |
+<%= link_to 'Back', pmmatches_path , class: "btn btn-info"%>

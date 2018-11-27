@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pmreferees</h1>
+<h1>Referees</h1>
 
 <table>
   <thead>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= pmreferee.first_name %></td>
         <td><%= pmreferee.last_name %></td>
-        <td><%= link_to 'Show', pmreferee %></td>
-        <td><%= link_to 'Edit', edit_pmreferee_path(pmreferee) %></td>
-        <td><%= link_to 'Destroy', pmreferee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', pmreferee , class: "btn btn-info"%></td>
+        <td><%= link_to 'Edit', edit_pmreferee_path(pmreferee) , class: "btn btn-warning"%></td>
+        <td><%= link_to 'Destroy', pmreferee, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Pmreferee', new_pmreferee_path %>
+<%= link_to 'New Pmreferee', new_pmreferee_path , class: "btn btn-success"%>

@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pmmatches</h1>
+<h1>Matches</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Date</th>
@@ -24,9 +24,9 @@
         <td><%= pmmatch.pmcourt_id %></td>
         <td><%= pmmatch.pmround_id %></td>
         <td><%= pmmatch.pmtournament_id %></td>
-        <td><%= link_to 'Show', pmmatch %></td>
-        <td><%= link_to 'Edit', edit_pmmatch_path(pmmatch) %></td>
-        <td><%= link_to 'Destroy', pmmatch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', pmmatch , class: "btn btn-info"%></td>
+        <td><%= link_to 'Edit', edit_pmmatch_path(pmmatch) , class: "btn btn-warning"%></td>
+        <td><%= link_to 'Destroy', pmmatch, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Pmmatch', new_pmmatch_path %>
+<%= link_to 'New Pmmatch', new_pmmatch_path , class: "btn btn-success"%>
