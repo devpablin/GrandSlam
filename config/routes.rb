@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'welcome#welcome'
   resources :pmsets
   resources :pmprizes
   resources :pmreferees
