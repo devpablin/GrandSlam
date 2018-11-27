@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h2>
   <strong>Number:</strong>
   <%= @pmcourt.number %>
-</p>
+</h2>
 <p>
   <strong>Place:</strong>
   <%= @pmcourt.pmplace.name %>
 </p>
 
-<%= link_to 'Edit', edit_pmcourt_path(@pmcourt) %> |
-<%= link_to 'Back', pmcourts_path %>
+<%= link_to 'Edit', edit_pmcourt_path(@pmcourt) , class: "btn btn-warning" %> |
+<%= link_to 'Back', pmcourts_path, class: "btn btn-info"%>

@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h2>
   <strong>Nombre:</strong>
   <%= @pmtrainer.nombre %>
-</p>
+</h2>
 
-<p>
+<h2>
   <strong>Apellido:</strong>
   <%= @pmtrainer.apellido %>
-</p>
+</h2>
 
-<%= link_to 'Edit', edit_pmtrainer_path(@pmtrainer) %> |
-<%= link_to 'Back', pmtrainers_path %>
+<%= link_to 'Edit', edit_pmtrainer_path(@pmtrainer) , class: "btn btn-warning"%> |
+<%= link_to 'Back', pmtrainers_path , class: "btn btn-info"%>

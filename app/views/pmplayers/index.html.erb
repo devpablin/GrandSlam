@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pmplayers</h1>
+<h1>Players</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>First name</th>
@@ -18,9 +18,9 @@
         <td><%= pmplayer.first_name %></td>
         <td><%= pmplayer.last_name %></td>
         <td><%= pmplayer.fechanacimiento %></td>
-        <td><%= link_to 'Show', pmplayer %></td>
-        <td><%= link_to 'Edit', edit_pmplayer_path(pmplayer) %></td>
-        <td><%= link_to 'Destroy', pmplayer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', pmplayer , class: "btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_pmplayer_path(pmplayer) , class: "btn btn-warning"%></td>
+        <td><%= link_to 'Destroy', pmplayer, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Pmplayer', new_pmplayer_path %>
+<%= link_to 'New Pmplayer', new_pmplayer_path , class: "btn btn-success"%>

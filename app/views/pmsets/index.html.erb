@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pmsets</h1>
+<h1>Sets</h1>
 
 <table>
   <thead>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= pmset.local_points %></td>
         <td><%= pmset.visitor_points %></td>
-        <td><%= link_to 'Show', pmset %></td>
-        <td><%= link_to 'Edit', edit_pmset_path(pmset) %></td>
-        <td><%= link_to 'Destroy', pmset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', pmset , class: "btn btn-info"%></td>
+        <td><%= link_to 'Edit', edit_pmset_path(pmset) , class: "btn btn-warning"%></td>
+        <td><%= link_to 'Destroy', pmset, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Pmset', new_pmset_path %>
+<%= link_to 'New Pmset', new_pmset_path , class: "btn btn-success"%>

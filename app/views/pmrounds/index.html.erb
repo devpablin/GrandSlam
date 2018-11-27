@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pmrounds</h1>
+<h1>Rounds</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Round</th>
@@ -14,9 +14,9 @@
     <% @pmrounds.each do |pmround| %>
       <tr>
         <td><%= pmround.round %></td>
-        <td><%= link_to 'Show', pmround %></td>
-        <td><%= link_to 'Edit', edit_pmround_path(pmround) %></td>
-        <td><%= link_to 'Destroy', pmround, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', pmround , class: "btn btn-info"%></td>
+        <td><%= link_to 'Edit', edit_pmround_path(pmround) , class: "btn btn-warning"%></td>
+        <td><%= link_to 'Destroy', pmround, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Pmround', new_pmround_path %>
+<%= link_to 'New Pmround', new_pmround_path , class: "btn btn-success"%>

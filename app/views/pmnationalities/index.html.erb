@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pmnationalities</h1>
+<h1>Nationalities</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Name</th>
@@ -13,10 +13,10 @@
   <tbody>
     <% @pmnationalities.each do |pmnationality| %>
       <tr>
-        <td><%= pmnationality.name %></td>
-        <td><%= link_to 'Show', pmnationality %></td>
-        <td><%= link_to 'Edit', edit_pmnationality_path(pmnationality) %></td>
-        <td><%= link_to 'Destroy', pmnationality, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= pmnationality.name%></td>
+        <td><%= link_to 'Show', pmnationality , class: "btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_pmnationality_path(pmnationality) , class: "btn btn-warning"%></td>
+        <td><%= link_to 'Destroy', pmnationality, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Pmnationality', new_pmnationality_path %>
+<%= link_to 'New Pmnationality', new_pmnationality_path , class: "btn btn-success"%>

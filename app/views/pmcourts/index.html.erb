@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pmcourts</h1>
+<h1>Courts</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Number</th>
@@ -14,9 +14,9 @@
     <% @pmcourts.each do |pmcourt| %>
       <tr>
         <td><%= pmcourt.number %></td>
-        <td><%= link_to 'Show', pmcourt %></td>
-        <td><%= link_to 'Edit', edit_pmcourt_path(pmcourt) %></td>
-        <td><%= link_to 'Destroy', pmcourt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', pmcourt , class: "btn btn-info"%></td>
+        <td><%= link_to 'Edit', edit_pmcourt_path(pmcourt) , class: "btn btn-warning"%></td>
+        <td><%= link_to 'Destroy', pmcourt, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Pmcourt', new_pmcourt_path %>
+<%= link_to 'New Pmcourt', new_pmcourt_path , class: "btn btn-success"%>

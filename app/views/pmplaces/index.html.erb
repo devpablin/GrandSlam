@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pmplaces</h1>
+<h1>Places</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= pmplace.name %></td>
         <td><%= pmplace.pmcountry_id %></td>
-        <td><%= link_to 'Show', pmplace %></td>
-        <td><%= link_to 'Edit', edit_pmplace_path(pmplace) %></td>
-        <td><%= link_to 'Destroy', pmplace, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', pmplace , class: "btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_pmplace_path(pmplace) , class: "btn btn-warning"%></td>
+        <td><%= link_to 'Destroy', pmplace, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger"%></td>
       </tr>
     <% end %>
   </tbody>
