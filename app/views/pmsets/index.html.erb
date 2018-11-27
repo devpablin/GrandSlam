@@ -2,9 +2,10 @@
 
 <h1>Sets</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
+      <th>Match</th>
       <th>Local points</th>
       <th>Visitor points</th>
       <th colspan="3"></th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @pmsets.each do |pmset| %>
       <tr>
+        <td><%= pmset.pmmatch.date.strftime("%b %d, %Y") +' '+ pmset.pmmatch.pmplayer_1.last_name+' vs. '+pmset.pmmatch.pmplayer_2.last_name %></td>
         <td><%= pmset.local_points %></td>
         <td><%= pmset.visitor_points %></td>
         <td><%= link_to 'Show', pmset , class: "btn btn-info"%></td>

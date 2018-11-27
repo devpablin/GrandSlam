@@ -18,17 +18,11 @@
       <tr>
         <td><%= pmprize.amount %></td>
         <td><%= pmprize.name %></td>
-<<<<<<< HEAD
         <td><%= pmprize.pmmatch.date.strftime("%b %d, %Y") +' '+ pmprize.pmmatch.pmplayer_1.last_name+' vs. '+pmprize.pmmatch.pmplayer_2.last_name %></td>
         <td><%= pmprize.pmplayer.first_name+' '+pmprize.pmplayer.last_name %></td>
-        <td><%= link_to 'Show', pmprize %></td>
-        <td><%= link_to 'Edit', edit_pmprize_path(pmprize) %></td>
-        <td><%= link_to 'Destroy', pmprize, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-=======
         <td><%= link_to 'Show', pmprize , class: "btn btn-info"%></td>
-        <td><%= link_to 'Edit', edit_pmprize_path(pmprize) , class: "btn btn-warning"%></td>
-        <td><%= link_to 'Destroy', pmprize, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger"%></td>
->>>>>>> sergio
+        <td><%= link_to 'Edit', edit_pmprize_path(pmprize), class: "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', pmprize, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>

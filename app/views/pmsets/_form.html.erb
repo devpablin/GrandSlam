@@ -18,7 +18,12 @@
 
   <div class="field">
     <%= form.label :visitor_points %>
-    <%= form.text_field :visitor_points, id: :pmset_visitor_points %>
+    <%= form.number_field :visitor_points, id: :pmset_visitor_points %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Match" %>
+    <%= form.select( :pmmatch_id, Pmmatch.all.collect {|p| [ p.date.strftime("%b %d, %Y")+' '+p.pmplayer_1.last_name + ' vs. '+p.pmplayer_2.last_name, p.id ] } )%>
   </div>
 
   <div class="actions">

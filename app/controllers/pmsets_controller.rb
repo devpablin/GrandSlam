@@ -69,6 +69,6 @@ class PmsetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pmset_params
-      params.require(:pmset).permit(:local_points, :visitor_points)
+      params.require(:pmset).permit(:local_points, :visitor_points, :pmmatch_id)
     end
 end

@@ -6,4 +6,5 @@ class Pmmatch < ApplicationRecord
   belongs_to :pmplayer_2, class_name: "Pmplayer"
   belongs_to :pmreferee
   has_many :pmprizes
+  has_many :pmsets
 end
