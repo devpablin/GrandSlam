@@ -69,6 +69,6 @@ class PmprizesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pmprize_params
-      params.require(:pmprize).permit(:amount, :name)
+      params.require(:pmprize).permit(:amount, :name, :pmmatch_id, :pmplayer_id)
     end
 end

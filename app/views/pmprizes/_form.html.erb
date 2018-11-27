@@ -20,6 +20,14 @@
     <%= form.label :name %>
     <%= form.text_field :name, id: :pmprize_name %>
   </div>
+  <div class="field">
+    <%= form.label "Match" %>
+    <%= form.select( :pmmatch_id, Pmmatch.all.collect {|p| [ p.date.strftime("%b %d, %Y")+' '+p.pmplayer_1.last_name + ' vs. '+p.pmplayer_2.last_name, p.id ] } )%>
+  </div>
+  <div class="field">
+    <%= form.label "Player" %>
+    <%= form.select( :pmplayer_id, Pmplayer.all.collect {|p| [ p.first_name+' '+p.last_name , p.id ] } )%>
+  </div>
 
   <div class="actions">
     <%= form.submit %>

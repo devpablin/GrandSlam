@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20181127173305) do
-=======
-ActiveRecord::Schema.define(version: 20181127165316) do
->>>>>>> origin/sergio
+ActiveRecord::Schema.define(version: 20181127194246) do
 
   create_table "anio", primary_key: "id_a", id: :string, limit: 7, force: :cascade do |t|
     t.integer "anio", limit: 7, precision: 7

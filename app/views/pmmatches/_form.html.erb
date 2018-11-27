@@ -51,6 +51,11 @@
     <%= form.select( :pmplayer_2_id, Pmplayer.all.collect {|p| [ p.first_name + ' '+p.last_name, p.id ] } )%>
   </div>
 
+  <div class="field">
+    <%= form.label "Referee" %>
+    <%= form.select( :pmreferee_id, Pmreferee.all.collect {|p| [ p.first_name + ' '+p.last_name, p.id ] } )%>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

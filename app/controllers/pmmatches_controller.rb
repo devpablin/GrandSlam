@@ -69,6 +69,6 @@ class PmmatchesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pmmatch_params
-      params.require(:pmmatch).permit(:date, :score1, :score2, :pmcourt_id, :pmround_id, :pmtournament_id, :pmplayer_1_id, :pmplayer_2_id)
+      params.require(:pmmatch).permit(:date, :score1, :score2, :pmcourt_id, :pmround_id, :pmtournament_id, :pmplayer_1_id, :pmplayer_2_id, :pmreferee_id)
     end
 end
