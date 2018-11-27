@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pmsets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Local points</th>
+      <th>Visitor points</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pmsets.each do |pmset| %>
+      <tr>
+        <td><%= pmset.local_points %></td>
+        <td><%= pmset.visitor_points %></td>
+        <td><%= link_to 'Show', pmset %></td>
+        <td><%= link_to 'Edit', edit_pmset_path(pmset) %></td>
+        <td><%= link_to 'Destroy', pmset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pmset', new_pmset_path %>

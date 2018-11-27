@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Local points:</strong>
+  <%= @pmset.local_points %>
+</p>
+
+<p>
+  <strong>Visitor points:</strong>
+  <%= @pmset.visitor_points %>
+</p>
+
+<%= link_to 'Edit', edit_pmset_path(@pmset) %> |
+<%= link_to 'Back', pmsets_path %>
